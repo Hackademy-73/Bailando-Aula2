@@ -1,19 +1,24 @@
 <x-layout>
 
-
-    <div class="container">
+    <div class="container my-5">
         <div class="row justify-content-center">
             <div class="col-12 col-md-8">
-                <h1>REGISTRATI QUI</h1>
+                <h1>Contattaci</h1>
             </div>
         </div>
     </div>
 
+    @if (session('message'))
+        <div class="alert alert-success">
+            {{session('message')}}
+        </div>
+    @endif
+
 
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-12 col-md-8">
-                <form method="POST" action="{{route('register')}}">
+                <form method="POST" action="{{route('send')}}">
 
                     @csrf
 
@@ -29,20 +34,15 @@
                     </div>
 
                     <div class="mb-3">
-                        <label for="password" class="form-label">Password</label>
-                        <input name="password" type="password" class="form-control" id="password">
+                        <label for="letter" class="form-label">Lettera di presentazione</label>
+                        <textarea name="letter" id="letter" cols="30" rows="10" class="form-control"></textarea>
                     </div>
 
-                    <div class="mb-3">
-                        <label for="passwordConfirmation" class="form-label">Conferma Password</label>
-                        <input name="password_confirmation" type="password" class="form-control"
-                            id="passwordConfirmation">
-                    </div>
-
-                    <button type="submit" class="btn btn-primary">Registrati!</button>
+                    <button type="submit" class="btn btn-primary">Invia</button>
                 </form>
             </div>
         </div>
     </div>
+
 
 </x-layout>

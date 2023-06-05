@@ -17,4 +17,8 @@ use Illuminate\Support\Facades\Route;
 
 // rotta per homepage
 Route::get('/', [PublicController::class, 'welcome'])->name('welcome');
-// rotta per s
+
+// rotta per invio mail
+Route::get('/contact-us', [PublicController::class, 'contact_us'])->name('contact_us');
+
+Route::post('/send', [PublicController::class, 'send'])->name('send');
