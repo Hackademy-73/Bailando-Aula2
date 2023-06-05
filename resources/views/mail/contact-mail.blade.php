@@ -4,17 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>BUFFER</title>
-    @vite(['resources/css/app.css'])
+    <title>Email</title>
 </head>
 <body>
+
+    <h1>Email inviata da: {{$name}}, {{$email}}</h1>
+    <p>Lettera di presentazione: {{$letter}}</p>
     
-    <x-navbar/>
-
-    {{$slot}}
-
-
-    
-    @vite(['resources/js/app.js'])
 </body>
-</html>
+</html>l
