@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ProductController;
 use App\Http\Controllers\PublicController;
 use Illuminate\Support\Facades\Route;
 
@@ -22,3 +23,8 @@ Route::get('/', [PublicController::class, 'welcome'])->name('welcome');
 Route::get('/contact-us', [PublicController::class, 'contact_us'])->name('contact_us');
 
 Route::post('/send', [PublicController::class, 'send'])->name('send');
+
+// rotta per i prodotti
+Route::get('/products', [ProductController::class, 'index'])->name('products');
+
+Route::get('/create-products', [ProductController::class, 'create'])->name('create_products');

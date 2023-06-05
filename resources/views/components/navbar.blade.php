@@ -14,7 +14,10 @@
                     <a class="nav-link active" aria-current="page" href="{{route('contact_us')}}">Lavora con noi</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Tutti i prodotti</a>
+                    <a class="nav-link active" aria-current="page" href="{{route('products')}}">Tutti i prodotti</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="{{route('create_products')}}">Crea il tuo prodotto</a>
                 </li>
                 @auth
                 <li class="nav-item">
