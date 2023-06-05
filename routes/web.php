@@ -14,4 +14,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
+// rotta per homepage
 Route::get('/', [PublicController::class, 'welcome'])->name('welcome');
+// rotta per s
